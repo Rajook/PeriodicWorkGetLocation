@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity">
+
+
+    <Button
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Logs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="10dp"
+        android:text="Logs"
+        app:layout_constraintStart_toStartOf="@+id/check"
+        app:layout_constraintTop_toBottomOf="@+id/check" />
+
+    <Button
+        android:id="@+id/stop_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="startService"
+        android:text="Start Foreground Service"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/Logs"
+        app:layout_constraintTop_toBottomOf="@+id/Logs"
+        />
+
+    <Button
+        android:id="@+id/btnStopService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="stopService"
+        android:text="Stop Foreground Service"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/stop_service"
+        app:layout_constraintTop_toBottomOf="@+id/stop_service"
+        />
+
+    <TextView
+        android:id="@+id/tvMac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="stopService"
+        android:text="Stop Foreground Service"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/btnStopService"
+        app:layout_constraintTop_toBottomOf="@+id/btnStopService"
+        />
+
+
+</android.support.constraint.ConstraintLayout>
