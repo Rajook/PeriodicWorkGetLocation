@@ -170,6 +170,23 @@ public class MainActivity extends AppCompatActivity {
         return false;
     }
 
+//    private fun isMyServiceRunning(serviceClass: Class<*>): Boolean {
+//        try {
+//            val manager =
+//                    getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
+//            for (service in manager.getRunningServices(
+//                    Int.MAX_VALUE
+//            )) {
+//                if (serviceClass.name == service.service.className) {
+//                    return true
+//                }
+//            }
+//        } catch (e: Exception) {
+//            return false
+//        }
+//        return false
+//    }
+
     public void stopService(View view){
         Intent myServiceIntent = new Intent(this, MyForegroundService.class);
         stopService(myServiceIntent);

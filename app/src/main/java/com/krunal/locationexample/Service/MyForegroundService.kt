@@ -42,9 +42,9 @@ class MyForegroundService : Service(), ProgressResponseBody.OnAttachmentDownload
         intent?.run {
             when (action) {
                 START_SERVICE -> {
-                    url = intent?.getStringExtra(EXTRA_URL) ?: ""
-                    name = intent?.getStringExtra(EXTRA_NAME) ?: ""
-                    id = intent?.getStringExtra(EXTRA_ID) ?: ""
+                    url = intent.getStringExtra(EXTRA_URL) ?: ""
+                    name = intent.getStringExtra(EXTRA_NAME) ?: ""
+                    id = intent.getStringExtra(EXTRA_ID) ?: ""
 
                     startForeground(NOTIFICATION_ID, prepareNotification(intent,"Uploading Data..."))
 
